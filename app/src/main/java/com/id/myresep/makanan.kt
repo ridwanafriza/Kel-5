@@ -1,3 +1,8 @@
 package com.id.myresep
 
-data class makanan()
+data class makanan(
+    makanan: makanan
+
+
+)
+
