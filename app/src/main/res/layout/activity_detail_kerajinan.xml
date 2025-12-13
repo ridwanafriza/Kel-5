@@ -1,104 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Judul -->
-        <TextView
-            android:id="@+id/txtJudul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
-
-        <!-- Dua Gambar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="20dp">
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageDetail1"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:scaleType="centerCrop"
-                android:background="#E0E0E0" />
+            <!-- Judul -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
 
-            <ImageView
-                android:id="@+id/imageDetail2"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:scaleType="centerCrop"
-                android:background="#E0E0E0" />
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/iconJudul"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:layout_marginEnd="8dp" />
 
-        <!-- Card Besar -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:padding="20dp"
-            android:backgroundTint="#F7EAD6"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="5dp">
+                <TextView
+                    android:id="@+id/txtJudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pot Tanaman"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
+            <!-- Dua Gambar -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="20dp">
 
-                <!-- Judul Bahan -->
+                <ImageView
+                    android:id="@+id/imageDetail1"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0"
+                    android:src="@drawable/pot"/>
 
-                <TextView
-                    android:id="@+id/txtBahanJudul"
-                    android:layout_width="87dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <!-- Isi Bahan -->
-                <TextView
-                    android:id="@+id/txtBahan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginBottom="24dp" />
-
-                <!-- Judul Cara -->
-                <TextView
-                    android:id="@+id/txtCaraJudul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp" />
-
-                <!-- Isi Cara -->
-                <TextView
-                    android:id="@+id/txtCara"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="4dp" />
+                <ImageView
+                    android:id="@+id/imageDetail2"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0"
+                    android:src="@drawable/pot2"/>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+            <!-- Card Besar -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                android:backgroundTint="#F7EAD6"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp">
 
-</ScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Judul Bahan dan Alat -->
+                    <TextView
+                        android:id="@+id/txtBahanJudul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alat dan Bahan"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- RecyclerView untuk Bahan -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"/>
+                    <!-- Adapter akan meng-inflate item_detail_kerajinan.xml -->
+
+                    <!-- Judul Cara Membuat -->
+                    <TextView
+                        android:id="@+id/txtCaraJudul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cara membuat"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- RecyclerView untuk Cara -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!-- Adapter akan meng-inflate item_detail_kerajinan.xml -->
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
