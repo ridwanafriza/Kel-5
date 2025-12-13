@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/main_nav"
+                app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.id.myresep.navigation.HomeFragment"
+        android:label="Beranda" />
+
+    <fragment
+        android:id="@+id/koleksiFragment"
+        android:name="com.id.myresep.navigation.KoleksiFragment"
+        android:label="Koleksi" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.id.myresep.navigation.ProfileFragment"
+        android:label="Profil" />
+
+</navigation>

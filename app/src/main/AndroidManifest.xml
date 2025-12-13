@@ -11,24 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myresep">
+
+        <!-- LOGIN ACTIVITY = HALAMAN AWAL -->
         <activity
-            android:name=".Starina.DetailKerajinanAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".Starina.apadah"
-            android:exported="false" />
-        <activity
-            android:name=".Starina.DetailKerajinanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MAIN ACTIVITY -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

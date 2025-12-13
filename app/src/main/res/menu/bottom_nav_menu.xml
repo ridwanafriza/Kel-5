@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Beranda"
+        android:icon="@drawable/icon_home" />
+
+    <item
+        android:id="@+id/koleksiFragment"
+        android:title="Koleksi"
+        android:icon="@drawable/icon_bookmark_nav" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profil"
+        android:icon="@drawable/icon_user" />
+
+</menu>
