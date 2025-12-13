@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.KoleksiFragment">
+    android:orientation="vertical"
+    android:padding="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Judul -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koleksi DIY"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
 
-</FrameLayout>
+    <!-- Jumlah tersimpan -->
+    <TextView
+        android:id="@+id/txtJumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 tersimpan"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKoleksi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
