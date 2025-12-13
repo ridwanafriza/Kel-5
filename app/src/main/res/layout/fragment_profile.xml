@@ -22,27 +22,28 @@
             android:layout_margin="16dp" />
     </RelativeLayout>
 
-    <!-- FOTO PROFIL (BULAT) -->
+    <!-- FOTO PROFIL (LAYER SENDIRI, AMAN) -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgProfile"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/profil"
+        android:layout_below="@id/header"
+        android:layout_marginTop="-55dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/profil"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
         app:strokeColor="@android:color/white"
         app:strokeWidth="4dp" />
 
-
     <!-- KONTEN -->
     <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
+        android:layout_below="@id/imgProfile"
         android:orientation="vertical"
-        android:paddingTop="80dp"
+        android:paddingTop="24dp"
         android:paddingStart="24dp"
         android:paddingEnd="24dp">
 
