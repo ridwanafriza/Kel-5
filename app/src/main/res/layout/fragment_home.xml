@@ -15,17 +15,21 @@
         android:textStyle="bold"
         android:layout_marginBottom="12dp"/>
 
-    <TextView
+    <EditText
+        android:id="@+id/etSearch"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/bg_input"
-        android:text="Mau bikin apa nih?"
+        android:hint="Mau bikin apa nih?"
         android:textSize="14sp"
-        android:gravity="center_vertical"
         android:paddingStart="16dp"
+        android:gravity="center_vertical"
         android:drawableStart="@drawable/ic_search"
         android:drawablePadding="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        android:singleLine="true"/>
+
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
