@@ -8,12 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.id.myresep.Starina.DetailKerajinanActivity
-import com.id.myresep.Starina.Kerajinan
 import com.id.myresep.R
 
-
 class HomeAdapter(
-    private val listKerajinan: List<Kerajinan>
+    private val listKoleksi: List<Koleksi>
 ) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     inner class HomeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -29,19 +27,19 @@ class HomeAdapter(
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        val item = listKerajinan[position]
+        val item = listKoleksi[position]
 
         holder.txtJudul.text = item.judul
-        holder.txtCaption.text = "Kerajinan DIY ramah lingkungan yang memanfaatkan bahan bekas menjadi barang kreatif dan bernilai guna."
-        holder.img.setImageResource(item.gambar1)
+        holder.txtCaption.text = item.caption
+        holder.img.setImageResource(item.gambar)
 
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, DetailKerajinanActivity::class.java)
 
             intent.putExtra("judul", item.judul)
-            intent.putExtra("gambar1", item.gambar1)
-            intent.putExtra("gambar2", item.gambar2)
+            intent.putExtra("caption", item.caption)
+            intent.putExtra("gambar", item.gambar)
             intent.putStringArrayListExtra("bahanList", ArrayList(item.bahan))
             intent.putStringArrayListExtra("caraList", ArrayList(item.cara))
 
@@ -49,5 +47,5 @@ class HomeAdapter(
         }
     }
 
-    override fun getItemCount(): Int = listKerajinan.size
+    override fun getItemCount(): Int = listKoleksi.size
 }

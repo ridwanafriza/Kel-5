@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.id.myresep.R
-import com.id.myresep.Starina.Kerajinan
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -16,9 +15,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val rvHome = view.findViewById<RecyclerView>(R.id.rvHome)
         rvHome.layoutManager = LinearLayoutManager(requireContext())
 
+        // Data dummy pakai data class Koleksi
         val homeList = listOf(
-            Kerajinan(
+            Koleksi(
                 "Pot Tanaman",
+                "Pot tanaman dari botol bekas adalah kerajinan sederhana yang memanfaatkan botol plastik sebagai pot tanaman.",
+                R.drawable.pot,
                 listOf(
                     "Botol plastik bekas",
                     "Gunting atau cutter",
@@ -32,12 +34,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     "Cat botol sesuai selera lalu biarkan kering kan",
                     "Masukkan tanah ke dalam pot",
                     "Tanam bibit dan siram secukupnya"
-                ),
-                R.drawable.pot,
-                R.drawable.pot2
+                )
             ),
-            Kerajinan(
+
+            Koleksi(
                 "Celengan Botol",
+                "Celengan dari botol bekas yang sederhana, kreatif, dan membantu mengurangi sampah plastik di sekitar kita.",
+                R.drawable.celengan,
                 listOf(
                     "Botol plastik bekas",
                     "Cutter atau gunting",
@@ -47,12 +50,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     "Buat lubang pada botol untuk memasukkan uang",
                     "Hias botol sesuai selera",
                     "Celengan siap digunakan"
-                ),
-                R.drawable.celengan,
-                R.drawable.celengan2
+                )
             ),
-            Kerajinan(
+
+            Koleksi(
                 "Bingkai Foto Kardus",
+                "Bingkai foto dari kardus bekas yang sederhana cocok untuk mempercantik dekorasi ruangan.",
+                R.drawable.bingkaifoto,
                 listOf(
                     "Kardus bekas",
                     "Gunting atau cutter",
@@ -64,12 +68,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     "Rekatkan bagian bingkai dengan lem",
                     "Hias bingkai sesuai selera",
                     "Masukkan foto ke dalam bingkai"
-                ),
-                R.drawable.bingkaifoto,
-                R.drawable.bingkai2
+                )
             )
-
-
         )
 
         rvHome.adapter = HomeAdapter(homeList)
