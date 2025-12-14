@@ -28,14 +28,19 @@ class KoleksiFragment : Fragment(R.layout.fragment_koleksi) {
         val koleksiList = listOf(
             Koleksi(
                 "Pot tanaman",
-                "Kerajinan dari botol bekas",
+                "Pot tanaman dari botol bekas adalah kerajinan sederhana yang memanfaatkan botol plastik sebagai pot tanaman.",
                 R.drawable.pot
             ),
             Koleksi(
-                "Pot tanaman hias",
-                "Cocok untuk dekorasi rumah",
-                R.drawable.pot2
-            )
+                "Celengan dari botol",
+                "Celengan dari botol bekas yang sederhana, kreatif, dan membantu mengurangi sampah plastik di sekitar kita.",
+                R.drawable.celengan
+            ),
+            Koleksi(
+                "Bingkai Foto Kardus",
+                "Bingkai foto dari kardus bekas yang sederhana cocok untuk mempercantik dekorasi ruangan.",
+                R.drawable.bingkaifoto
+        )
         )
 
         txtJumlah.text = "${koleksiList.size} tersimpan"

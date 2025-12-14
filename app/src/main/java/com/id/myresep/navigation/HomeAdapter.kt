@@ -32,7 +32,7 @@ class HomeAdapter(
         val item = listKerajinan[position]
 
         holder.txtJudul.text = item.judul
-        holder.txtCaption.text = "Kerajinan DIY ramah lingkungan"
+        holder.txtCaption.text = "Kerajinan DIY ramah lingkungan yang memanfaatkan bahan bekas menjadi barang kreatif dan bernilai guna."
         holder.img.setImageResource(item.gambar1)
 
         holder.itemView.setOnClickListener {
