@@ -27,6 +27,12 @@
             android:name=".MainActivity"
             android:exported="false" />
 
+        <!--  DETAIL KERAJINAN  -->
+        <activity
+            android:name=".Starina.DetailKerajinanActivity"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>
