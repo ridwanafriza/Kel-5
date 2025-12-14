@@ -31,7 +31,7 @@ class HomeAdapter(
 
         holder.txtJudul.text = item.judul
         holder.txtCaption.text = item.caption
-        holder.img.setImageResource(item.gambar)
+        holder.img.setImageResource(item.gambar1)
 
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
@@ -39,7 +39,8 @@ class HomeAdapter(
 
             intent.putExtra("judul", item.judul)
             intent.putExtra("caption", item.caption)
-            intent.putExtra("gambar", item.gambar)
+            intent.putExtra("gambar1", item.gambar1)
+            intent.putExtra("gambar2", item.gambar2)
             intent.putStringArrayListExtra("bahanList", ArrayList(item.bahan))
             intent.putStringArrayListExtra("caraList", ArrayList(item.cara))
 

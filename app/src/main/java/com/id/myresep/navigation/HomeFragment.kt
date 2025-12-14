@@ -21,6 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 "Pot Tanaman",
                 "Pot tanaman dari botol bekas adalah kerajinan sederhana yang memanfaatkan botol plastik sebagai pot tanaman.",
                 R.drawable.pot,
+                R.drawable.pot2,
                 listOf(
                     "Botol plastik bekas",
                     "Gunting atau cutter",
@@ -41,6 +42,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 "Celengan Botol",
                 "Celengan dari botol bekas yang sederhana, kreatif, dan membantu mengurangi sampah plastik di sekitar kita.",
                 R.drawable.celengan,
+                R.drawable.celengan2,
                 listOf(
                     "Botol plastik bekas",
                     "Cutter atau gunting",
@@ -57,6 +59,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 "Bingkai Foto Kardus",
                 "Bingkai foto dari kardus bekas yang sederhana cocok untuk mempercantik dekorasi ruangan.",
                 R.drawable.bingkaifoto,
+                R.drawable.bingkai2,
                 listOf(
                     "Kardus bekas",
                     "Gunting atau cutter",
@@ -71,6 +74,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 )
             )
         )
+
 
         rvHome.adapter = HomeAdapter(homeList)
     }

@@ -29,17 +29,17 @@ class KoleksiFragment : Fragment(R.layout.fragment_koleksi) {
             Koleksi(
                 "Pot tanaman",
                 "Pot tanaman dari botol bekas adalah kerajinan sederhana yang memanfaatkan botol plastik sebagai pot tanaman.",
-                R.drawable.pot
+                R.drawable.pot, R.drawable.pot2
             ),
             Koleksi(
                 "Celengan dari botol",
                 "Celengan dari botol bekas yang sederhana, kreatif, dan membantu mengurangi sampah plastik di sekitar kita.",
-                R.drawable.celengan
+                R.drawable.celengan, R.drawable.celengan2
             ),
             Koleksi(
                 "Bingkai Foto Kardus",
                 "Bingkai foto dari kardus bekas yang sederhana cocok untuk mempercantik dekorasi ruangan.",
-                R.drawable.bingkaifoto
+                R.drawable.bingkaifoto, R.drawable.bingkai2
         )
         )
 

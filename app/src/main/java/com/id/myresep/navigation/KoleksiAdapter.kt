@@ -31,7 +31,7 @@ class KoleksiAdapter (
 
         holder.textViewJudul.text = koleksi.judul
         holder.textViewCaption.text = koleksi.caption
-        holder.imageKerajinan.setImageResource(koleksi.gambar)
+        holder.imageKerajinan.setImageResource(koleksi.gambar1)
     }
 
     override fun getItemCount(): Int = listKoleksi.size
