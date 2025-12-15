@@ -12,7 +12,7 @@ class KoleksiAdapter (
     val listKoleksi: List<Koleksi>
 ) : RecyclerView.Adapter<KoleksiAdapter.KoleksiViewHolder>() {
 
-    override fun onCreateViewHolder(
+    override fun onCreateViewHolder( //item baru
         parent: ViewGroup,
         viewType: Int
     ): KoleksiViewHolder {
@@ -20,10 +20,10 @@ class KoleksiAdapter (
         val layout = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_koleksi, parent, false)
 
-        return KoleksiViewHolder(layout)
+        return KoleksiViewHolder(layout) //dibungkus view holder
     }
 
-    override fun onBindViewHolder(
+    override fun onBindViewHolder( //mengisi data ke xml
         holder: KoleksiViewHolder,
         position: Int
     ) {
@@ -34,7 +34,7 @@ class KoleksiAdapter (
         holder.imageKerajinan.setImageResource(koleksi.gambar1)
     }
 
-    override fun getItemCount(): Int = listKoleksi.size
+    override fun getItemCount(): Int = listKoleksi.size //memberitahu jumlah item ke rv
 
     class KoleksiViewHolder(val row: View) : RecyclerView.ViewHolder(row) {
         val textViewJudul: TextView = row.findViewById(R.id.txtJudul)
