@@ -10,10 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.id.myresep.Starina.DetailKerajinanActivity
 import com.id.myresep.R
 
+// Adapter untuk RecyclerView di HomeFragment
 class HomeAdapter(
-    private val listKoleksi: List<Koleksi>
+    private val listKoleksi: List<Koleksi> // Data yang mau ditampilkan
 ) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
+    // ViewHolder untuk menampung referensi view tiap item (card)
     inner class HomeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val txtJudul: TextView = view.findViewById(R.id.txtJudul)
         val txtCaption: TextView = view.findViewById(R.id.txtCaption)
