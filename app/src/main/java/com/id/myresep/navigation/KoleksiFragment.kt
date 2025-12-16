@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.id.myresep.R
-import com.id.myresep.Starina.DetailKerajinanActivity
 import com.id.myresep.navigation.Koleksi
 import com.id.myresep.navigation.KoleksiAdapter
 
@@ -47,9 +46,5 @@ class KoleksiFragment : Fragment(R.layout.fragment_koleksi) {
 
         rvKoleksi.adapter = KoleksiAdapter(koleksiList)
 
-        // (OPSIONAL) Klik item → ke detail
-        rvKoleksi.adapter = KoleksiAdapter(koleksiList).apply {
-            // Kalau nanti mau klik item, logic-nya ditaruh di adapter
-        }
     }
 }
