@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Menu untuk BottomNavigationView
+    ID item harus sama dengan ID fragment di nav_graph
+-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Menu menuju HomeFragment -->
     <item
         android:id="@+id/homeFragment"
         android:title="Beranda"
         android:icon="@drawable/icon_home" />
 
+    <!-- Menu menuju KoleksiFragment -->
     <item
         android:id="@+id/koleksiFragment"
         android:title="Koleksi"
         android:icon="@drawable/icon_bookmark_nav" />
 
+    <!-- Menu menuju ProfileFragment -->
     <item
         android:id="@+id/profileFragment"
         android:title="Profil"

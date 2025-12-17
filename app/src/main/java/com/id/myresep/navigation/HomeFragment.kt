@@ -7,15 +7,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.id.myresep.R
 
+// HomeFragment adalah Fragment yang berfungsi sebagai halaman utama (Home/Beranda)
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Mengambil RecyclerView dari layout fragment_home
         val rvHome = view.findViewById<RecyclerView>(R.id.rvHome)
+
+        // Mengatur RecyclerView agar menampilkan item secara vertikal (atas ke bawah)
         rvHome.layoutManager = LinearLayoutManager(requireContext())
 
-        // Data dummy pakai data class Koleksi
+        // Membuat data dummy menggunakan data class Koleksi
+        // Data ini nantinya akan ditampilkan ke RecyclerView melalui adapter
         val homeList = listOf(
             Koleksi(
                 "Pot Tanaman",
@@ -75,7 +80,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             )
         )
 
-
+        // Menghubungkan data (homeList) ke RecyclerView menggunakan HomeAdapter
+        // Adapter berperan sebagai penghubung antara data dan tampilan item_koleksi
         rvHome.adapter = HomeAdapter(homeList)
     }
 }

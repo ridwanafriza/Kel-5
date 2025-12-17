@@ -26,7 +26,6 @@ class DetailKerajinanActivity : AppCompatActivity() {
         val imageDetail2: ImageView = findViewById(R.id.imageDetail2)
         val rvBahan: androidx.recyclerview.widget.RecyclerView = findViewById(R.id.rvBahan)
         val rvCara: androidx.recyclerview.widget.RecyclerView = findViewById(R.id.rvCara)
-
         val judul = intent.getStringExtra("judul") ?: "Judul Tidak Diketahui"
         val bahanList = intent.getStringArrayListExtra("bahanList") ?: arrayListOf()
         val caraList = intent.getStringArrayListExtra("caraList") ?: arrayListOf()
